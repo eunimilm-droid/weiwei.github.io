@@ -1,0 +1,122 @@
+.myImage {
+  width: 50%;   
+  height: auto;
+}
+
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5faff;
+  }
+ .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .title p {
+      font-style: italic;
+      font-size: 14px;
+      margin: 0;
+      margin-top: 4px;
+      color: #ffdc73;
+    }
+
+    .right-title {
+      font-weight: bold;
+      font-size: 28px;
+    }
+	
+  /* HEADER */
+  header {
+    background-color: #1a0dab; 
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+  }
+
+  nav ul li {
+    position: relative;
+    cursor: pointer;
+  }
+
+  nav ul li > span {
+    padding: 5px 0;
+    display: inline-block;
+  }
+
+  /* DROPDOWN MENU */
+  nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #f9d64a;
+    padding: 10px 0;
+    border-radius: 4px;
+    min-width: 200px;
+  }
+
+  nav ul li .dropdown a {
+    display: block;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  nav ul li .dropdown a:hover {
+    background-color: rgba(255, 254, 118, 0.5);
+  }
+
+  /* Show on hover */
+  nav ul li:hover .dropdown {
+    display: block;
+  }
+  
+  footer {
+      background-color: #2a0d7c;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    a:hover {
+      color: #ffde59;
+      text-decoration: underline;
+    }
+
+    footer a::before {
+      content: "←";
+      margin-right: 8px;
+    }
+	
+	
