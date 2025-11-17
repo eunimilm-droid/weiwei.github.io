@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="librarystyles.css">
+<title>URS Morong Campus Library</title>
+
+
+</head>
+
+<body>
+
+<header>
+    <div class="title">
+      <img src="urs logo.png" alt="URS Logo" class="myImage">
+    </div>
+  <nav>
+    <ul>
+      <li>
+        <span>About ▼</span>
+        <div class="dropdown">
+          <a href="#">University</a>
+          <a href="#">Library Directory</a>
+          <a href="#">Main Library</a>
+          <a href="#">College and Unit Libraries</a>
+          <a href="#">Brief History</a>
+          <a href="#">Statistical Profile</a>
+          <a href="#">Donate to the Library</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Policies ▼</span>
+        <div class="dropdown">
+          <a href="#">General Policies</a>
+          <a href="#">Borrowing Rules</a>
+          <a href="#">Fines & Penalties</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Request ▼</span>
+        <div class="dropdown">
+          <a href="#">Extended Reading</a>
+          <a href="#">Room Reservation</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Search ▼</span>
+        <div class="dropdown">
+          <a href="#">Tuklas</a>
+          <a href="#">Online Databases</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Inquire ▼</span>
+        <div class="dropdown">
+          <a href="#">Ask a Librarian</a>
+          <a href="#">FAQ</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Publications ▼</span>
+        <div class="dropdown">
+          <a href="#">Bulletins</a>
+          <a href="#">Newsletters</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<footer>
+    
+  </footer>
+<script>
+  // Mobile/Click toggle support 
+  document.querySelectorAll("nav ul li").forEach(item => {
+    item.addEventListener("click", e => {
+      if (window.innerWidth <= 900) {
+        let dropdown = item.querySelector(".dropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        e.stopPropagation();
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", () => {
+    if (window.innerWidth <= 900) {
+      document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+    }
+  });
+</script>
+
+</body>
+</html>
