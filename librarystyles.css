@@ -1,5 +1,14 @@
+/* Make ALL images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* If you want a specific max-size for the logo only */
 .myImage {
-  width: 50%;   
+  width: 200px;   /* or any size you want */
+  max-width: 100%;
   height: auto;
 }
 
@@ -118,5 +127,4 @@
       content: "←";
       margin-right: 8px;
     }
-	
 	
