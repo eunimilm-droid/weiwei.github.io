@@ -1,11 +1,4 @@
-/* Make ALL images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.campus {max-width: 100%;
+.campus {width: 100%;
   height: auto;
   display: block;
 }
@@ -133,4 +126,5 @@ img {
       margin-right: 8px;
     }
 	
+
 
