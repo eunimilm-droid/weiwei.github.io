@@ -152,7 +152,7 @@
   nav ul li .dropdown {
     position: static;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .myImage {
@@ -165,6 +165,6 @@
 
   footer {
     position: static;  /* Prevent overlap on small screens */
-    text-align: center;
+    text-align: left;
   }
 }
