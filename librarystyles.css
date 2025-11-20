@@ -136,7 +136,7 @@
 /* MOBILE BREAKPOINT — triggers at 900px and below */
 @media (max-width: 900px) {
   .campus {
-    content: url("Campus Library Mobile.png");  /* Mobile image */
+    content: url("Campus Mobile.png");  /* Mobile image */
   }
 
   header {
