@@ -125,46 +125,59 @@
       content: "←";
       margin-right: 8px;
     }
-	
+/* HAMBURGER BUTTON (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
 /* MOBILE BREAKPOINT — triggers at 900px and below */
 @media (max-width: 900px) {
+  .campus {
+    content: url("Campus Library Mobile.png");  /* Mobile image */
+  }
 
   header {
-    flex-direction: column;
-    text-align: left;
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
   }
 
   .title {
-    justify-content: left;
+    justify-content: flex-start;
   }
 
+  /* Hide nav until hamburger is clicked */
   nav ul {
+    display: none;
     flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  nav ul li {
+    background: #1a0dab;
+    padding: 15px;
     width: 100%;
+    gap: 15px;
+    margin-top: 10px;
   }
 
+  /* Make dropdown full width */
   nav ul li .dropdown {
     position: static;
     width: 100%;
+    background: #f9d64a;
     text-align: left;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
   }
 
   .myImage {
-    width: 150px;   /* Smaller logo on mobile */
-  }
-
-  .campus {
-    width: 100%;
+    width: 150px;
   }
 
   footer {
-    position: static;  /* Prevent overlap on small screens */
-    text-align: left;
+    position: static;
   }
 }
