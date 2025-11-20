@@ -1,13 +1,13 @@
-.campus {width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* If you want a specific max-size for the logo only */
 .myImage {
-  width: 200px;   /* or any size you want */
+  width: 200px;
   max-width: 100%;
   height: auto;
+}
+
+.campus {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
  body {
@@ -126,5 +126,45 @@
       margin-right: 8px;
     }
 	
+/* MOBILE BREAKPOINT — triggers at 900px and below */
+@media (max-width: 900px) {
 
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
 
+  .title {
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li .dropdown {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  .myImage {
+    width: 150px;   /* Smaller logo on mobile */
+  }
+
+  .campus {
+    width: 100%;
+  }
+
+  footer {
+    position: static;  /* Prevent overlap on small screens */
+    text-align: center;
+  }
+}
