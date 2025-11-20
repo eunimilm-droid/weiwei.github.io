@@ -5,6 +5,11 @@ img {
   display: block;
 }
 
+.campus {max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* If you want a specific max-size for the logo only */
 .myImage {
   width: 200px;   /* or any size you want */
@@ -128,3 +133,4 @@ img {
       margin-right: 8px;
     }
 	
+
