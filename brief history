@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="librarystyles.css">
+  <title>URSched - University of Rizal System</title>
+  <style>
+    /* Main Content */
+    main {
+      flex: 1; /* ensures it stretches to fill available space */
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 80px;
+      gap: 40px;
+    }
+
+    .about {
+      width: 55%;
+    }
+
+    .about h2 {
+      font-size: 20px;
+    }
+
+    .about p {
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <img src="urs logo.png" alt="URS Logo">
+    </div>
+    <div class="right-title">URSched</div>
+  </header>
+
+  <main>
+    <div class="about">
+      <h2>About URS</h2>
+      <p>
+        The University of Rizal System (URS) as an organized academic entity composed of separate but interrelated units coordinates and integrates system-wide functions and activities. It has the prime mandate of providing instruction, research, extension and production to the public.
+      </p>
+      <p>
+        With the Board of Regents as the highest governing board, the University is also led by its president, Dr. Nancy Talavera Pascual. With her, are three vice-presidents – Dr. Marvin P. Amoin, Vice-president for Administration and Finance; Dr. Allan E. Conde, Vice-president for Academic Affairs; and, Dr. Marites M. Rio, Vice-president for Research Development, Extension, and Production. The University is also managed by campus directors, unit heads, deans, and program heads.
+      </p>
+      <p>
+        The President is the chief executive officer, university leader, and spokesperson. She performs administrative and leadership work and participates in related activities such as instruction, extension, production, and research overseeing all university operations, including programs and policy directions.
+      </p>
+    </div>
+
+    <img src="calendar.png" alt="Calendar Image" style="max-width:800px; border-radius:6px;">
+  </main>
+  
+    </div>
+  </footer>
+</body>
+</html>
