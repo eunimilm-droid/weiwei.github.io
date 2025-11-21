@@ -1,1 +1,171 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="librarystyles.css">
+<title>URS Morong Campus Library</title>
+
+
+</head>
+
+<body>
+
+<header>
+    <div class="title">
+        <a href="index.html">
+            <img src="urs logo.png" alt="URS Logo" class="myImage">
+        </a>
+    </div>  <!-- ← CLOSE .title HERE -->
+
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    <ul>
+      <li>
+        <span>About ▼</span>
+        <div class="dropdown">
+          <a href="about/university/">University</a>
+          <a href="about/library directory">Library Directory</a>
+          <a href="#">Main Library</a>
+          <a href="#">College and Unit Libraries</a>
+          <a href="#">Brief History</a>
+          <a href="#">Statistical Profile</a>
+          <a href="#">Donate to the Library</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Policies ▼</span>
+        <div class="dropdown">
+          <a href="#">General Policies</a>
+          <a href="#">Borrowing Rules</a>
+          <a href="#">Fines & Penalties</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Request ▼</span>
+        <div class="dropdown">
+          <a href="#">Extended Reading</a>
+          <a href="#">Room Reservation</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Search ▼</span>
+        <div class="dropdown">
+          <a href="#">Tuklas</a>
+          <a href="#">Online Databases</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Inquire ▼</span>
+        <div class="dropdown">
+          <a href="#">Ask a Librarian</a>
+          <a href="#">FAQ</a>
+        </div>
+      </li>
+
+      <li>
+        <span>Publications ▼</span>
+        <div class="dropdown">
+          <a href="#">Bulletins</a>
+          <a href="#">Newsletters</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main style="padding: 40px; max-width: 900px; margin: auto; line-height: 1.7;">
+
+  <h1 style="color:#1a0dab;">About the University of Rizal System</h1>
+
+  <p>
+    The University of Rizal System (URS) as an organized academic entity composed of separate but interrelated units 
+    coordinates and integrates system-wide functions and activities. It has the prime mandate of providing instruction, 
+    research, extension and production to the public.
+  </p>
+
+  <p>
+    With the Board of Regents as the highest governing board, the University is also led by its president, 
+    <strong>Dr. Nancy Talavera Pascual</strong>. With her are three vice-presidents – 
+    <strong>Dr. Marvin P. Amoin</strong>, Vice-president for Administration and Finance; 
+    <strong>Dr. Allan E. Conde</strong>, Vice-president for Academic Affairs; and 
+    <strong>Dr. Marites M. Rio</strong>, Vice-president for Research Development, Extension, and Production.
+  </p>
+
+  <p>
+    The University is also managed by campus directors, unit heads, deans, and program heads. The President is the 
+    chief executive officer, university leader, and spokesperson. She performs administrative and leadership work 
+    and participates in related activities such as instruction, extension, production, and research, overseeing all 
+    university operations, including programs and policy directions.
+  </p>
+
+  <h2 style="margin-top: 30px; color:#1a0dab;">MISSION</h2>
+  <p>
+    The University of Rizal System is committed to nurture and produce upright and competent graduates and empowered 
+    community through relevant and sustainable higher professional and technical instruction, research, extension and 
+    production services.
+  </p>
+
+  <h2 style="margin-top: 30px; color:#1a0dab;">VISION</h2>
+  <p>
+    The leading University in human resource development, knowledge and technology generation and environmental 
+    stewardship.
+  </p>
+
+  <h2 style="margin-top: 30px; color:#1a0dab;">CORE VALUES</h2>
+  <ul>
+    <li>Responsiveness</li>
+    <li>Integrity</li>
+    <li>Service</li>
+    <li>Excellence</li>
+    <li>Social Responsibility</li>
+  </ul>
+
+  <h2 style="margin-top: 30px; color:#1a0dab;">QUALITY POLICY</h2>
+  <p>
+    The University of Rizal System commits to deliver excellent products and services to ensure total stakeholders' 
+    satisfaction in instruction, research, extension, production and dynamic administrative support and to 
+    continuously improve its Quality Management System processes to satisfy all applicable requirements.
+  </p>
+
+</main>
+
+<footer>
+    
+  </footer>
+<script>
+
+function toggleMenu() {
+  const nav = document.querySelector("nav ul");
+  nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+}
+
+  // Mobile/Click toggle support 
+  document.querySelectorAll("nav ul li").forEach(item => {
+    item.addEventListener("click", e => {
+      if (window.innerWidth <= 900) {
+        let dropdown = item.querySelector(".dropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+        e.stopPropagation();
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", () => {
+    if (window.innerWidth <= 900) {
+      document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+    }
+  });
+</script>
+
+</body>
+</html>
+
