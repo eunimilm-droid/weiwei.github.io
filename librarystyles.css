@@ -43,7 +43,7 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
   }
 
   .myImage {
-    width: 200px;
+    width: 100%;
   }
  .hamburger {
   margin-right: 30px; /* increase to move more left */
