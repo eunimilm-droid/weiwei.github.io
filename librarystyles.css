@@ -133,51 +133,55 @@
   color: white;
 }
 
-/* MOBILE BREAKPOINT — triggers at 900px and below */
+/* MOBILE PHONE NAV SLIDE-OUT MENU */
 @media (max-width: 900px) {
-  .campus {
-    content: url("Campus Mobile.png");  /* Mobile image */
+
+  /* Make nav container overlay the screen when active */
+  nav {
+    position: absolute;
+    top: 70px;              /* just below the header */
+    right: 0;
+    width: 75%;             /* width of the slide-out menu */
+    max-width: 350px;
+    height: 100vh;
+    background: #0047ab;    /* deep blue background like the picture */
+    transform: translateX(100%); /* hidden off-screen */
+    transition: 0.4s ease;
+    z-index: 999;
   }
 
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px;
+  /* When active, slide into view */
+  nav.active {
+    transform: translateX(0);
   }
 
-  .title {
-    justify-content: flex-start;
-  }
-
-  /* Hide nav until hamburger is clicked */
+  /* Vertical menu */
   nav ul {
-    display: none;
+    display: flex;
     flex-direction: column;
-    background: #1a0dab;
-    padding: 15px;
-    width: 100%;
-    gap: 15px;
-    margin-top: 10px;
+    margin: 0;
+    padding: 20px 0;
+    gap: 20px;
   }
 
-  /* Make dropdown full width */
+  /* Menu items */
+  nav ul li span {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
   nav ul li .dropdown {
-    position: static;
-    width: 100%;
     background: #f9d64a;
-    text-align: left;
+    width: 100%;
+    padding: 10px 0;
   }
 
-  /* Show hamburger */
+  /* Hamburger */
   .hamburger {
     display: block;
   }
-
-  .myImage {
-    width: 150px;
-  }
-
-  footer {
-    position: static;
-  }
 }
+
