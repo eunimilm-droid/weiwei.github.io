@@ -21,21 +21,87 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
 /* HAMBURGER BUTTON (hidden on desktop) */ 
 .hamburger { display: none; font-size: 30px; cursor: pointer; color: white; } 
 /* MOBILE BREAKPOINT — triggers at 900px and below */ 
-@media (max-width: 900px) { 
-.campus { content: url("Campus Mobile.png"); 
-/* Mobile image */ } 
-header { flex-direction: row; justify-content: space-between; padding: 15px 20px; } 
-.title { justify-content: flex-start; } 
-/* Hide nav until hamburger is clicked */ 
+@media (max-width: 900px) {
 
-  nav ul {
-    position: absolute;
-    top: 80px; /* equal to header height */
+  /* Header stays fixed with stable logo */
+  header {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 80px;
+    padding: 15px 20px;
+    background: #1a0dab;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body {
+    padding-top: 90px; /* prevents content hiding behind the fixed header */
+  }
+
+  .myImage {
+    width: 150px;
+  }
+
+  /* Hamburger visible */
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* NAVIGATION MENU becomes a dropdown list BELOW the header */
+  nav ul {
+    position: absolute;
+    top: 80px; /* appears BELOW the header */
+    left: 0;
+    width: 100%;
+    background: #1a0dab;
+    display: none; /* hidden until hamburger click */
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
     z-index: 999;
   }
-/* Make dropdown full width */ nav ul li .dropdown { position: static; width: 100%; background: #f9d64a; text-align: left; } 
-/* Show hamburger */ 
-.hamburger { display: block; } 
-.myImage { width: 150px; } footer { position: static; } }
+
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 20px;
+  }
+
+  nav ul li > span {
+    display: block;
+    color: white;
+    font-size: 18px;
+  }
+
+  /* DROPDOWNS ALSO EXPAND AS LIST ITEMS */
+  nav ul li .dropdown {
+    display: none;
+    position: static;
+    background: #f9d64a;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li .dropdown a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 16px;
+  }
+
+  /* Campus image on mobile */
+  .campus {
+    content: url("Campus Mobile.png");
+  }
+
+  footer {
+    position: static;
+  }
+}
