@@ -27,7 +27,14 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
 header { flex-direction: row; justify-content: space-between; padding: 15px 20px; } 
 .title { justify-content: flex-start; } 
 /* Hide nav until hamburger is clicked */ 
-nav ul { display: none; flex-direction: column; background: #1a0dab; padding: 15px; width: 100%; gap: 15px; margin-top: 10px; } 
+
+  nav ul {
+    position: absolute;
+    top: 80px; /* equal to header height */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
 /* Make dropdown full width */ nav ul li .dropdown { position: static; width: 100%; background: #f9d64a; text-align: left; } 
 /* Show hamburger */ 
 .hamburger { display: block; } 
