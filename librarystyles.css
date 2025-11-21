@@ -21,65 +21,51 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
 /* HAMBURGER BUTTON (hidden on desktop) */ 
 .hamburger { display: none; font-size: 30px; cursor: pointer; color: white; } 
 /* MOBILE BREAKPOINT — triggers at 900px and below */ 
-/* Mobile responsive layout */
-@media screen and (max-width: 900px) {
-  main {
-    flex-direction: column; /* stack content vertically */
-    padding: 20px;          /* smaller padding for mobile */
-    gap: 20px;              /* smaller gap between elements */
-    align-items: center;    /* center content horizontally */
-  }
+@media (max-width: 900px) {
 
-  .about {
-    width: 100%;            /* full width for text */
-  }
-
-  .about h2 {
-    font-size: 18px;        /* slightly smaller headings */
-    text-align: center;     /* center heading */
-  }
-
-  .about p {
-    font-size: 14px;        /* maintain readability */
-    line-height: 1.6;
-    text-align: justify;
-  }
-
-  main img {
-    width: 100%;           /* image takes full width */
-    max-width: 600px;      /* limit max width */
-    border-radius: 6px;
-  }
-
-  /* Adjust nav menu for mobile */
-  nav ul {
-    flex-direction: column;
-    display: none; /* initially hidden, toggled by hamburger */
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: 60px; /* adjust below header */
+  /* Header stays fixed with stable logo */
+  header {
+    position: fixed;
+    top: 0;
     left: 0;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-
-  nav ul li {
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    height: 80px;
+    padding: 15px 20px;
+    background: #1a0dab;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  nav ul li .dropdown {
-    display: none; /* hide dropdown by default */
-    flex-direction: column;
-    padding: 5px 0;
+  body {
+    padding-top: 90px; /* prevents content hiding behind the fixed header */
   }
 
-  .hamburger {
-    display: block; /* show hamburger on mobile */
-    cursor: pointer;
-    font-size: 24px;
+  .myImage {
+    width: 200px;
+    width: 100%;
   }
+ .hamburger {
+  margin-right: 30px; /* increase to move more left */
 }
 
+  /* Hamburger visible */
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* NAVIGATION MENU becomes a dropdown list BELOW the header */
+  nav ul {
+    position: absolute;
+    top: 80px; /* appears BELOW the header */
+    left: 0;
+    width: 100%;
+    background: #1a0dab;
+    display: none; /* hidden until hamburger click */
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
