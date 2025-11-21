@@ -105,10 +105,35 @@
       </p>
     </div>
 
-    <img src="brief history.png" alt="Calendar Image" style="max-width:800px; border-radius:6px;">
+    <img src="brief history.png" alt="Library" style="max-width:800px; border-radius:6px;">
   </main>
   
     </div>
-  </footer>
+  <footer></footer>
+
+<script>
+function toggleMenu() {
+  const nav = document.querySelector("nav ul");
+  nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+}
+
+// Mobile dropdown behavior
+document.querySelectorAll("nav ul li").forEach(item => {
+  item.addEventListener("click", e => {
+    if (window.innerWidth <= 900) {
+      let dropdown = item.querySelector(".dropdown");
+      dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+      e.stopPropagation();
+    }
+  });
+});
+
+document.addEventListener("click", () => {
+  if (window.innerWidth <= 900) {
+    document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+  }
+});
+</script>
+
 </body>
 </html>
