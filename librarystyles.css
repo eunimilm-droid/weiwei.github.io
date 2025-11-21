@@ -133,21 +133,8 @@
   color: white;
 }
 
-/* MOBILE BREAKPOINT — triggers at 900px and below */
+/* MOBILE PHONE NAV SLIDE-OUT MENU */
 @media (max-width: 900px) {
-  .campus {
-    content: url("Campus Mobile.png");  /* Mobile image */
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px 20px;
-  }
-
-  .title {
-    justify-content: flex-start;
-  }
 
   /* Make nav container overlay the screen when active */
   nav {
