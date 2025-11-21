@@ -43,7 +43,6 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
   }
 
   .myImage {
-    width: 200px;
     width: 100%;
   }
  .hamburger {
@@ -69,3 +68,43 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
     flex-direction: column;
     gap: 0;
     margin: 0;
+    padding: 0;
+    z-index: 999;
+  }
+
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 20px;
+  }
+
+  nav ul li > span {
+    display: block;
+    color: white;
+    font-size: 18px;
+  }
+
+  /* DROPDOWNS ALSO EXPAND AS LIST ITEMS */
+  nav ul li .dropdown {
+    display: none;
+    position: static;
+    background: #f9d64a;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li .dropdown a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 16px;
+  }
+
+  /* Campus image on mobile */
+  .campus {
+    content: url("Campus Mobile.png");
+  }
+
+  footer {
+    position: static;
+  }
+}
