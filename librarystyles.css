@@ -46,7 +46,7 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
     width: 150px;
   }
  .hamburger {
-  margin-right: 20px; /* increase to move more left */
+  margin-right: 20%; /* increase to move more left */
 }
 
   /* Hamburger visible */
@@ -108,4 +108,3 @@ a:hover { color: #ffde59; text-decoration: underline; } footer a::before { conte
     position: static;
   }
 }
-
